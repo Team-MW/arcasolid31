@@ -98,13 +98,12 @@ export default function EpoxyDecoratifPage() {
               </div>
 
               <div>
-                <div style={{ background: "#FFFFFF", borderRadius: "16px", overflow: "hidden", border: "1.5px solid var(--border-light)", boxShadow: "var(--shadow-lg)" }}>
+                <div className="service-pricing-card">
                   <img
                     src="/images/epoxy_decoratif.jpg"
                     alt="Sol époxy décoratif marbré de luxe par ArcaSolid31"
-                    style={{ width: "100%", height: "300px", objectFit: "cover" }}
                   />
-                  <div style={{ padding: "2rem" }}>
+                  <div className="service-pricing-body">
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "1.25rem", borderBottom: "1px solid var(--border-light)", paddingBottom: "1rem" }}>
                       <div>
                         <span style={{ fontSize: "0.8rem", textTransform: "uppercase", color: "var(--text-muted)", fontWeight: 700 }}>Tarif Officiel</span>

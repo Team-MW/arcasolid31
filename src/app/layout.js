@@ -38,13 +38,18 @@ export const metadata = {
   }
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0A4140"
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <meta name="theme-color" content="#0A4140" />
       </head>
       <body>{children}</body>
     </html>

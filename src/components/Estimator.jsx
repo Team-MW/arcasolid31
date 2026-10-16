@@ -132,22 +132,11 @@ export default function Estimator({ onTransferToForm }) {
               </div>
 
               <div style={{ marginBottom: "1rem" }}>
-                <label
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "0.6rem",
-                    cursor: "pointer",
-                    fontSize: "0.925rem",
-                    color: "var(--text-main)",
-                    fontWeight: 600
-                  }}
-                >
+                <label className="estimator-prep-label">
                   <input
                     type="checkbox"
                     checked={includePreparation}
                     onChange={(e) => setIncludePreparation(e.target.checked)}
-                    style={{ width: "18px", height: "18px", accentColor: "var(--brand-primary)" }}
                   />
                   <span>Inclure la préparation technique (ponçage diamant &amp; primaire d&apos;accroche)</span>
                 </label>
@@ -170,12 +159,12 @@ export default function Estimator({ onTransferToForm }) {
 
                 <button
                   type="button"
-                  className="btn btn-gold"
+                  className="btn btn-gold btn-full-responsive"
                   onClick={handleApplyToQuote}
                   style={{ width: "100%" }}
                 >
                   <span>Valider &amp; Demander le Devis Officiel</span>
-                  <ArrowRight size={16} />
+                  <ArrowRight size={16} style={{ flexShrink: 0 }} />
                 </button>
               </div>
             </div>

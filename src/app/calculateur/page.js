@@ -148,23 +148,21 @@ export default function CalculateurPage() {
                     </div>
                   </div>
 
-                  <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", marginTop: "1.5rem" }}>
-                    <label style={{ display: "flex", alignItems: "center", gap: "0.6rem", cursor: "pointer", fontSize: "0.925rem" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginTop: "1.5rem" }}>
+                    <label className="estimator-prep-label">
                       <input
                         type="checkbox"
                         checked={includePreparation}
                         onChange={(e) => setIncludePreparation(e.target.checked)}
-                        style={{ width: "18px", height: "18px", accentColor: "var(--brand-primary)" }}
                       />
                       <span><strong>Préparation technique incluse :</strong> rabotage diamant, ouverture des pores &amp; primaire époxy</span>
                     </label>
 
-                    <label style={{ display: "flex", alignItems: "center", gap: "0.6rem", cursor: "pointer", fontSize: "0.925rem" }}>
+                    <label className="estimator-prep-label">
                       <input
                         type="checkbox"
                         checked={includePlinths}
                         onChange={(e) => setIncludePlinths(e.target.checked)}
-                        style={{ width: "18px", height: "18px", accentColor: "var(--brand-primary)" }}
                       />
                       <span>Gorge / plinthes étanches périphériques</span>
                     </label>
@@ -207,11 +205,11 @@ export default function CalculateurPage() {
 
                     <a
                       href="#formulaire-confirmation"
-                      className="btn btn-gold"
+                      className="btn btn-gold btn-full-responsive"
                       style={{ width: "100%" }}
                     >
                       <span>Transférer vers ma demande de devis</span>
-                      <ArrowRight size={16} />
+                      <ArrowRight size={16} style={{ flexShrink: 0 }} />
                     </a>
                   </div>
                 </div>

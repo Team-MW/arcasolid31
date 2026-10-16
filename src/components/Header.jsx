@@ -180,8 +180,8 @@ export default function Header() {
                     href="/services"
                     className={`nav-link dropdown-trigger ${isActive("/services") ? "active" : ""}`}
                   >
-                    <span>Services & Tarifs</span>
-                    <ChevronDown size={14} className={`dropdown-chevron ${servicesOpen ? "rotate" : ""}`} />
+                    <span>Services</span>
+                    <ChevronDown size={13} className={`dropdown-chevron ${servicesOpen ? "rotate" : ""}`} />
                   </Link>
 
                   <div className={`services-dropdown ${servicesOpen ? "show" : ""}`}>
@@ -219,7 +219,7 @@ export default function Header() {
                     href="/maitrise-technique"
                     className={`nav-link ${isActive("/maitrise-technique") ? "active" : ""}`}
                   >
-                    Maîtrise Technique
+                    Expertise
                   </Link>
                 </li>
 
@@ -237,7 +237,7 @@ export default function Header() {
                     href="/calculateur"
                     className={`nav-link ${isActive("/calculateur") ? "active" : ""}`}
                   >
-                    Calculateur m²
+                    Calculateur
                   </Link>
                 </li>
 
@@ -250,7 +250,7 @@ export default function Header() {
                   </Link>
                 </li>
 
-                <li>
+                <li className="nav-item-contact">
                   <Link
                     href="/contact"
                     className={`nav-link ${isActive("/contact") ? "active" : ""}`}
