@@ -5,7 +5,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import { Calculator, ArrowRight, CheckCircle2, ShieldCheck, Sparkles, Send } from "lucide-react";
+import JotformEmbed from "@/components/JotformEmbed";
+import { Calculator, ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 
 export default function CalculateurPage() {
   const [selectedType, setSelectedType] = useState("garage");
@@ -14,14 +15,6 @@ export default function CalculateurPage() {
   const [includePlinths, setIncludePlinths] = useState(false);
   const [finishQuality, setFinishQuality] = useState("standard");
 
-  const [formData, setFormData] = useState({
-    nom: "",
-    email: "",
-    telephone: "",
-    ville: "Toulouse",
-    notes: ""
-  });
-  const [submitted, setSubmitted] = useState(false);
 
   const rates = {
     garage: {
@@ -56,11 +49,6 @@ export default function CalculateurPage() {
   const plinthCost = includePlinths ? Math.round(Math.sqrt(area) * 4 * 18) : 0;
   const finishBonus = finishQuality === "premium" ? Math.round(area * 10) : 0;
   const total = surfaceCost + prepCost + plinthCost + finishBonus;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
 
   return (
     <>
@@ -228,117 +216,7 @@ export default function CalculateurPage() {
                   </p>
                 </div>
 
-                {submitted ? (
-                  <div style={{ textAlign: "center", padding: "2.5rem 1rem" }}>
-                    <div
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        borderRadius: "50%",
-                        background: "#ECFDF5",
-                        color: "#059669",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        margin: "0 auto 1.25rem auto"
-                      }}
-                    >
-                      <CheckCircle2 size={32} />
-                    </div>
-                    <h4 style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--brand-primary)", marginBottom: "0.5rem" }}>
-                      Demande enregistrée avec succès !
-                    </h4>
-                    <p style={{ color: "var(--text-secondary)", maxWidth: "500px", margin: "0 auto 1.5rem auto", lineHeight: 1.6 }}>
-                      Merci <strong>{formData.nom}</strong>. Nous étudions votre projet pour <strong>{area} m² de {current.name}</strong> et vous contactons sous 24h ouvrées.
-                    </p>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      onClick={() => setSubmitted(false)}
-                    >
-                      Effectuer une autre simulation
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
-                    <div className="form-grid-2">
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="calc-nom">Nom complet*</label>
-                        <input
-                          type="text"
-                          id="calc-nom"
-                          required
-                          placeholder="Jean Dupont"
-                          className="form-input"
-                          value={formData.nom}
-                          onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="calc-email">Adresse e-mail*</label>
-                        <input
-                          type="email"
-                          id="calc-email"
-                          required
-                          placeholder="jean.dupont@email.fr"
-                          className="form-input"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="form-grid-2">
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="calc-tel">Numéro de téléphone*</label>
-                        <input
-                          type="tel"
-                          id="calc-tel"
-                          required
-                          placeholder="06 12 34 56 78"
-                          className="form-input"
-                          value={formData.telephone}
-                          onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="calc-ville">Commune (Toulouse / 31)*</label>
-                        <input
-                          type="text"
-                          id="calc-ville"
-                          required
-                          placeholder="Ex : Toulouse, Balma, Blagnac..."
-                          className="form-input"
-                          value={formData.ville}
-                          onChange={(e) => setFormData({ ...formData, ville: e.target.value })}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="form-field">
-                      <label className="form-label" htmlFor="calc-notes">Précisions supplémentaires</label>
-                      <textarea
-                        id="calc-notes"
-                        rows={3}
-                        placeholder="Nature du sol existant (carrelage, dalle brute, ancien lino...), présence de fissures, délais souhaités..."
-                        className="form-textarea"
-                        value={formData.notes}
-                        onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="btn btn-primary"
-                      style={{ width: "100%", padding: "1rem", fontSize: "1.05rem" }}
-                    >
-                      <span>Valider ma demande de devis &bull; ~{total.toLocaleString("fr-FR")} €</span>
-                      <Send size={18} />
-                    </button>
-                  </form>
-                )}
+                <JotformEmbed formId="262884025857367" />
               </div>
             </div>
           </div>

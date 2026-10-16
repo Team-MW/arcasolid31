@@ -1,56 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
 import JotformEmbed from "@/components/JotformEmbed";
-import { Mail, Phone, MapPin, Clock, ShieldCheck, CheckCircle2, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ShieldCheck, MessageSquare } from "lucide-react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    nom: "",
-    email: "",
-    telephone: "",
-    typeProjet: "",
-    message: ""
-  });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const params = new URLSearchParams(window.location.search);
-      const proj = params.get("projet");
-      if (proj) {
-        setFormData((prev) => ({
-          ...prev,
-          typeProjet: proj,
-          message: `Bonjour ArcaSolid31, je souhaite obtenir un devis pour : ${proj}. Merci de me recontacter pour fixer un rendez-vous.`
-        }));
-      }
-    }
-  }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 600);
-  };
-
-  const projectOptions = [
-    "Devis Sols époxy décoratif (130€ le m²)",
-    "Devis Epoxy pour sol de garage (70 € le M²)",
-    "Devis Béton Ciré (130€ le m²)",
-    "Projet Extérieur - Moquette de Pierre",
-    "Rénovation & Nivellement de Dalles Béton",
-    "Table Époxy Artisanale sur-mesure",
-    "Autre projet de revêtement"
-  ];
 
   return (
     <>
