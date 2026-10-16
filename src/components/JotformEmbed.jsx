@@ -32,7 +32,7 @@ export default function JotformEmbed({ formId = "262884025857367" }) {
   }, [formId]);
 
   return (
-    <div className="jotform-embed-container" style={{ width: "100%", position: "relative" }}>
+    <div className="jotform-embed-container" style={{ width: "100%", position: "relative", backgroundColor: "#FFFFFF" }}>
       <iframe
         id={`JotFormIFrame-${formId}`}
         title="Formulaire de Devis ARCASOLID31"
@@ -56,7 +56,7 @@ export default function JotformEmbed({ formId = "262884025857367" }) {
           height: "760px",
           border: "none",
           borderRadius: "14px",
-          background: "transparent",
+          backgroundColor: "#FFFFFF",
           display: "block",
         }}
         scrolling="no"

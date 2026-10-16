@@ -12,10 +12,10 @@
   --brand-gold-light: #DFBF83;
   --brand-gold-soft: rgba(197, 160, 89, 0.12);
 
-  /* Neutrals & Surfaces */
-  --bg-page: #F8FAFA;
+  /* Neutrals & Surfaces - Pure White Background */
+  --bg-page: #FFFFFF;
   --bg-surface: #FFFFFF;
-  --bg-subtle: #F0F4F4;
+  --bg-subtle: #FAFCFC;
   --border-light: rgba(10, 65, 64, 0.09);
   --border-focus: #0A4140;
 
@@ -51,11 +51,12 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  background-color: #FFFFFF !important;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-page);
+  background-color: #FFFFFF !important;
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -2824,6 +2825,7 @@ main {
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
+  background-color: #FFFFFF !important;
 }
 
 section {

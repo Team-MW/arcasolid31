@@ -70,7 +70,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="section-padding">
+        <section className="section-padding" style={{ backgroundColor: "#FFFFFF" }}>
           <div className="container">
             <div className="contact-layout" style={{ marginTop: 0 }}>
               {/* Coordinates Panel */}

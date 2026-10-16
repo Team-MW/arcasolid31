@@ -45,7 +45,7 @@ export default function MentionsLegalesPage() {
         </section>
 
         {/* Content Section */}
-        <section className="section-padding" style={{ background: "var(--bg-subtle)" }}>
+        <section className="section-padding" style={{ background: "#FFFFFF" }}>
           <div className="container" style={{ maxWidth: "1080px" }}>
             
             {/* Quick Legal Summary Card */}
