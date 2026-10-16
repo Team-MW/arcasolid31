@@ -95,7 +95,7 @@ export default function Contact({ formData, setFormData }) {
                   <div className="contact-item-content">
                     <span className="contact-item-label">Siège &amp; Atelier</span>
                     <span className="contact-item-val">
-                      Rue du général maurel, 31000 Toulouse, France
+                      8 Rue du Général Maurel, 31140 Aucamville (Toulouse Métropole)
                     </span>
                   </div>
                 </div>

@@ -125,7 +125,7 @@ export default function ContactPage() {
                       <div className="contact-item-content">
                         <span className="contact-item-label">Adresse Siège &amp; Dépôt</span>
                         <span className="contact-item-val">
-                          Rue du général maurel, 31000 Toulouse, France
+                          8 Rue du Général Maurel, 31140 Aucamville (Toulouse Métropole)
                         </span>
                       </div>
                     </div>
@@ -320,7 +320,7 @@ export default function ContactPage() {
                   Déplacement &amp; Étude Gratuite à Domicile
                 </h3>
                 <p style={{ color: "var(--text-secondary)", lineHeight: 1.65, fontSize: "0.95rem" }}>
-                  Basés <strong>Rue du général maurel, 31000 Toulouse</strong>, nous nous déplaçons rapidement dans un rayon de 50 km autour de Toulouse : Toulouse Métropole, Blagnac, Colomiers, Tournefeuille, Cugnaux, Balma, L&apos;Union, Muret, Ramonville, Castanet-Tolosan et Montauban.
+                  Basés <strong>8 Rue du Général Maurel, 31140 Aucamville</strong>, nous nous déplaçons rapidement dans un rayon de 50 km autour de Toulouse : Toulouse Métropole, Aucamville, Blagnac, Colomiers, Tournefeuille, Cugnaux, Balma, L&apos;Union, Muret, Ramonville, Castanet-Tolosan et Montauban.
                 </p>
               </div>
 

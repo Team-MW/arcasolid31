@@ -55,7 +55,7 @@ export default function AProposPage() {
                   Créateur de Sols d&apos;Exception en Haute-Garonne
                 </h2>
                 <p style={{ fontSize: "1.05rem", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Implanté au cœur de Toulouse, au <strong>Rue du général maurel (31000)</strong>, ARCASOLID31 intervient auprès des particuliers et des professionnels exigeants : propriétaires de villas, architectes d&apos;intérieur, gérants de commerces et passionnés d&apos;automobiles.
+                  Implanté au <strong>8 Rue du Général Maurel (31140 Aucamville - Toulouse Métropole)</strong>, ARCASOLID31 intervient auprès des particuliers et des professionnels exigeants : propriétaires de villas, architectes d&apos;intérieur, gérants de commerces et passionnés d&apos;automobiles.
                 </p>
                 <p style={{ fontSize: "1.05rem", color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: "1.5rem" }}>
                   Notre emblème – réunissant <strong>Béton Ciré, Moquette de Pierre et Résine Décorative Époxy</strong> – symbolise notre triple maîtrise des revêtements minéraux, drainants et polymères.

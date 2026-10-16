@@ -119,7 +119,7 @@ export default function Header() {
               <span className="topbar-sep">•</span>
               <span className="topbar-item">
                 <MapPin size={13} className="topbar-icon" />
-                <span>Rue du général maurel, 31000 Toulouse</span>
+                <span>8 Rue du Général Maurel, 31140 Aucamville</span>
               </span>
             </div>
             <div className="topbar-info topbar-right">
@@ -488,6 +488,17 @@ export default function Header() {
               <span>Contact & Devis</span>
               <ArrowRight size={15} className="mobile-nav-arrow" />
             </Link>
+
+            <Link
+              href="/mentions-legales"
+              className={`mobile-nav-item ${
+                isActive("/mentions-legales") ? "active" : ""
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>Mentions Légales</span>
+              <ArrowRight size={15} className="mobile-nav-arrow" />
+            </Link>
           </nav>
         </div>
 
@@ -515,7 +526,7 @@ export default function Header() {
             </div>
             <div className="drawer-info-line">
               <MapPin size={13} />
-              <span>Rue du général maurel, 31000 Toulouse</span>
+              <span>8 Rue du Général Maurel, 31140 Aucamville</span>
             </div>
             <div className="drawer-info-line">
               <Mail size={13} />

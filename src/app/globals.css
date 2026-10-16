@@ -2830,3 +2830,232 @@ section {
   box-sizing: border-box;
 }
 
+/* =========================================================
+   MENTIONS LÉGALES & JURIDIQUE STYLING
+   ========================================================= */
+.legal-highlight-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 30px rgba(10, 65, 64, 0.06);
+  padding: 2rem 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.legal-highlight-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.legal-badge-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--brand-teal-glow);
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.legal-highlight-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  margin-bottom: 0.25rem;
+}
+
+.legal-highlight-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.legal-data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2rem;
+}
+
+.legal-data-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.legal-data-label {
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.legal-data-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  word-break: break-word;
+}
+
+.legal-sections-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.legal-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  padding: 1.85rem 2rem;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.legal-card:hover {
+  box-shadow: 0 8px 28px rgba(10, 65, 64, 0.08);
+}
+
+.legal-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.legal-card-header h3 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: var(--brand-primary);
+  margin: 0;
+}
+
+.legal-icon {
+  color: var(--brand-gold);
+  flex-shrink: 0;
+}
+
+.legal-card-body {
+  font-size: 0.965rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.legal-card-body p {
+  margin-bottom: 0.85rem;
+}
+
+.legal-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legal-contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.legal-list-icon {
+  color: var(--brand-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.legal-host-box {
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--brand-primary);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 0.85rem;
+}
+
+.legal-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.legal-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.legal-checklist li svg {
+  color: var(--brand-gold);
+  flex-shrink: 0;
+}
+
+.legal-bullet-list {
+  margin: 1rem 0 0 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legal-bullet-list li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.legal-footer-box {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  padding: 2rem 2.25rem;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .legal-data-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .legal-highlight-card {
+    padding: 1.5rem;
+  }
+  .legal-card {
+    padding: 1.35rem 1.25rem;
+  }
+  .legal-highlight-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+  .legal-footer-box {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

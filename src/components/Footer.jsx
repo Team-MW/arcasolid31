@@ -131,7 +131,7 @@ export default function Footer() {
               <li>
                 <div className="footer-contact-item">
                   <MapPin size={16} className="footer-contact-icon" />
-                  <span>Rue du général maurel, 31000 Toulouse, France</span>
+                  <span>8 Rue du Général Maurel, 31140 Aucamville (Toulouse)</span>
                 </div>
               </li>
             </ul>
@@ -148,7 +148,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom">
           <div className="footer-copy">
-            &copy; {currentYear} ARCASOLID31 &bull; Tous droits réservés &bull; Artisan Sols Époxy &amp; Béton Ciré Toulouse (Haute-Garonne)
+            &copy; {currentYear} ARCASOLID31 &bull; Tous droits réservés &bull; SAS au capital social &bull; SIREN 106 564 875 &bull; Aucamville &bull; Toulouse Métropole
           </div>
           <div className="footer-bottom-nav">
             <Link href="/" className="footer-bottom-link">Accueil</Link>
@@ -156,6 +156,7 @@ export default function Footer() {
             <Link href="/portfolio" className="footer-bottom-link">Portfolio</Link>
             <Link href="/calculateur" className="footer-bottom-link">Calculateur</Link>
             <Link href="/contact" className="footer-bottom-link">Contact</Link>
+            <Link href="/mentions-legales" className="footer-bottom-link" style={{ fontWeight: 600, color: "var(--brand-gold)" }}>Mentions Légales</Link>
           </div>
         </div>
       </div>
