@@ -1,32 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle2, Clock, ShieldCheck } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ShieldCheck } from "lucide-react";
+import JotformEmbed from "@/components/JotformEmbed";
 
-export default function Contact({ formData, setFormData }) {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    // Simulate submission
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 700);
-  };
-
-  const projectOptions = [
-    "Devis Sols époxy décoratif (130€ le m²)",
-    "Devis Epoxy pour sol de garage (70 € le M²)",
-    "Devis Béton Ciré (130€ le m²)",
-    "Projet Extérieur - Moquette de Pierre",
-    "Rénovation & Nivellement de Dalles Béton",
-    "Table Époxy Artisanale sur-mesure",
-    "Autre projet de revêtement"
-  ];
+export default function Contact() {
 
   return (
     <section className="section-padding contact-section" id="contact">
@@ -132,141 +109,9 @@ export default function Contact({ formData, setFormData }) {
             </div>
           </div>
 
-          {/* Form Panel */}
+          {/* Form Panel with Official JotForm */}
           <div className="contact-form-panel">
-            {submitted ? (
-              <div style={{ textAlign: "center", padding: "3rem 1rem" }}>
-                <div
-                  style={{
-                    width: "68px",
-                    height: "68px",
-                    borderRadius: "50%",
-                    background: "#ECFDF5",
-                    color: "#059669",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    margin: "0 auto 1.5rem auto"
-                  }}
-                >
-                  <CheckCircle2 size={38} />
-                </div>
-                <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--brand-primary)", marginBottom: "0.75rem" }}>
-                  Demande envoyée avec succès !
-                </h3>
-                <p style={{ color: "var(--text-secondary)", maxWidth: "460px", margin: "0 auto 2rem auto", lineHeight: 1.6 }}>
-                  Merci <strong>{formData.nom}</strong>. Ahmad Chehade et l&apos;équipe ARCASOLID31 examineront votre projet et vous recontacteront sous 24h ouvrées.
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-secondary"
-                  onClick={() => setSubmitted(false)}
-                >
-                  Envoyer un autre message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit}>
-                <div className="form-grid-2">
-                  <div className="form-field">
-                    <label className="form-label" htmlFor="nom">
-                      Nom complet*
-                    </label>
-                    <input
-                      type="text"
-                      id="nom"
-                      required
-                      placeholder="Ex : Jean Dupont"
-                      className="form-input"
-                      value={formData.nom}
-                      onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="form-field">
-                    <label className="form-label" htmlFor="email">
-                      Adresse e-mail*
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      required
-                      placeholder="exemple@domaine.fr"
-                      className="form-input"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    />
-                  </div>
-                </div>
-
-                <div className="form-grid-2">
-                  <div className="form-field">
-                    <label className="form-label" htmlFor="telephone">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      id="telephone"
-                      placeholder="Ex : 06 12 34 56 78"
-                      className="form-input"
-                      value={formData.telephone}
-                      onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="form-field">
-                    <label className="form-label" htmlFor="projet">
-                      Type de projet*
-                    </label>
-                    <select
-                      id="projet"
-                      required
-                      className="form-select"
-                      value={formData.typeProjet}
-                      onChange={(e) => setFormData({ ...formData, typeProjet: e.target.value })}
-                    >
-                      <option value="">Sélectionnez votre projet</option>
-                      {projectOptions.map((opt, i) => (
-                        <option key={i} value={opt}>
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                <div className="form-field">
-                  <label className="form-label" htmlFor="message">
-                    Message*
-                  </label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={4}
-                    placeholder="Décrivez votre besoin : surface approximative (m²), état du sol actuel, localisation exacte, délais souhaités..."
-                    className="form-textarea"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="btn btn-primary"
-                  style={{ width: "100%", padding: "1rem", fontSize: "1.05rem" }}
-                >
-                  {loading ? (
-                    <span>Traitement en cours...</span>
-                  ) : (
-                    <>
-                      <span>Envoyer ma demande</span>
-                      <Send size={18} />
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+            <JotformEmbed formId="262884025857367" />
           </div>
         </div>
       </div>

@@ -5,7 +5,8 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingActions from "@/components/FloatingActions";
-import { Mail, Phone, MapPin, Clock, ShieldCheck, Send, CheckCircle2, MessageSquare } from "lucide-react";
+import JotformEmbed from "@/components/JotformEmbed";
+import { Mail, Phone, MapPin, Clock, ShieldCheck, CheckCircle2, MessageSquare } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -175,141 +176,9 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Form Panel */}
+              {/* Form Panel with Official JotForm */}
               <div className="contact-form-panel">
-                {submitted ? (
-                  <div style={{ textAlign: "center", padding: "3rem 1rem" }}>
-                    <div
-                      style={{
-                        width: "68px",
-                        height: "68px",
-                        borderRadius: "50%",
-                        background: "#ECFDF5",
-                        color: "#059669",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        margin: "0 auto 1.5rem auto"
-                      }}
-                    >
-                      <CheckCircle2 size={38} />
-                    </div>
-                    <h3 style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--brand-primary)", marginBottom: "0.75rem" }}>
-                      Demande envoyée avec succès !
-                    </h3>
-                    <p style={{ color: "var(--text-secondary)", maxWidth: "460px", margin: "0 auto 2rem auto", lineHeight: 1.6 }}>
-                      Merci <strong>{formData.nom}</strong>. Ahmad Chehade et l&apos;équipe technique ARCASOLID31 examineront votre projet et vous recontacteront sous 24h ouvrées.
-                    </p>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      onClick={() => setSubmitted(false)}
-                    >
-                      Envoyer un autre message
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
-                    <div className="form-grid-2">
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="contact-nom">
-                          Nom complet*
-                        </label>
-                        <input
-                          type="text"
-                          id="contact-nom"
-                          required
-                          placeholder="Ex : Jean Dupont"
-                          className="form-input"
-                          value={formData.nom}
-                          onChange={(e) => setFormData({ ...formData, nom: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="contact-email">
-                          Adresse e-mail*
-                        </label>
-                        <input
-                          type="email"
-                          id="contact-email"
-                          required
-                          placeholder="exemple@domaine.fr"
-                          className="form-input"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="form-grid-2">
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="contact-tel">
-                          Téléphone
-                        </label>
-                        <input
-                          type="tel"
-                          id="contact-tel"
-                          placeholder="Ex : 06 12 34 56 78"
-                          className="form-input"
-                          value={formData.telephone}
-                          onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
-                        />
-                      </div>
-
-                      <div className="form-field">
-                        <label className="form-label" htmlFor="contact-projet">
-                          Type de projet*
-                        </label>
-                        <select
-                          id="contact-projet"
-                          required
-                          className="form-select"
-                          value={formData.typeProjet}
-                          onChange={(e) => setFormData({ ...formData, typeProjet: e.target.value })}
-                        >
-                          <option value="">Sélectionnez votre projet</option>
-                          {projectOptions.map((opt, i) => (
-                            <option key={i} value={opt}>
-                              {opt}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="form-field">
-                      <label className="form-label" htmlFor="contact-message">
-                        Message*
-                      </label>
-                      <textarea
-                        id="contact-message"
-                        required
-                        rows={5}
-                        placeholder="Décrivez votre besoin : surface approximative (m²), état actuel du sol (dalle brute, carrelage existant...), commune d'intervention, délais souhaités..."
-                        className="form-textarea"
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="btn btn-primary"
-                      style={{ width: "100%", padding: "1rem", fontSize: "1.05rem" }}
-                    >
-                      {loading ? (
-                        <span>Envoi en cours...</span>
-                      ) : (
-                        <>
-                          <span>Envoyer ma demande</span>
-                          <Send size={18} />
-                        </>
-                      )}
-                    </button>
-                  </form>
-                )}
+                <JotformEmbed formId="262884025857367" />
               </div>
             </div>
 
