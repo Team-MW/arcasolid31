@@ -315,29 +315,16 @@ export default function ServicesPage() {
             </div>
 
             {/* Bottom CTA */}
-            <div
-              style={{
-                marginTop: "4.5rem",
-                background: "linear-gradient(135deg, var(--brand-primary-deep) 0%, var(--brand-primary) 100%)",
-                borderRadius: "20px",
-                padding: "3rem",
-                color: "#FFFFFF",
-                display: "flex",
-                flexWrap: "wrap",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "2rem"
-              }}
-            >
+            <div className="cta-conversion-banner">
               <div>
-                <h3 style={{ fontSize: "1.75rem", fontWeight: 800, marginBottom: "0.5rem" }}>
+                <h3 style={{ fontSize: "clamp(1.4rem, 4vw, 1.75rem)", fontWeight: 800, marginBottom: "0.5rem" }}>
                   Prêt à transformer votre sol ?
                 </h3>
-                <p style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: "1rem", maxWidth: "540px" }}>
+                <p style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: "0.95rem", maxWidth: "540px" }}>
                   Obtenez votre estimation gratuite en 2 minutes avec notre calculateur de prix en ligne ou contactez notre équipe toulousaine.
                 </p>
               </div>
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <div className="cta-conversion-buttons">
                 <Link href="/calculateur" className="btn btn-gold">
                   Simulateur au m²
                 </Link>

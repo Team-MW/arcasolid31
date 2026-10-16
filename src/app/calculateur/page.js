@@ -219,10 +219,10 @@ export default function CalculateurPage() {
             </div>
 
             {/* Confirmation & Contact Form */}
-            <div id="formulaire-confirmation" style={{ marginTop: "4.5rem", maxWidth: "820px", margin: "4.5rem auto 0 auto" }}>
+            <div id="formulaire-confirmation" style={{ maxWidth: "820px", margin: "3.5rem auto 0 auto" }}>
               <div className="contact-form-panel">
                 <div style={{ marginBottom: "1.75rem", textAlign: "center" }}>
-                  <h3 style={{ fontSize: "1.8rem", fontWeight: 800, color: "var(--brand-primary)" }}>
+                  <h3 className="section-title" style={{ fontSize: "clamp(1.5rem, 4vw, 1.8rem)", marginBottom: "0.5rem" }}>
                     Confirmez Votre Demande de Devis Gratuit
                   </h3>
                   <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem" }}>

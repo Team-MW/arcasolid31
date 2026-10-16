@@ -314,19 +314,7 @@ export default function ContactPage() {
             </div>
 
             {/* Map / Local presence info */}
-            <div
-              style={{
-                marginTop: "4.5rem",
-                background: "var(--bg-subtle)",
-                borderRadius: "16px",
-                padding: "2.5rem",
-                border: "1px solid var(--border-light)",
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "2.5rem",
-                alignItems: "center"
-              }}
-            >
+            <div className="responsive-banner-card" style={{ marginTop: "4rem" }}>
               <div>
                 <h3 style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--brand-primary)", marginBottom: "0.75rem" }}>
                   Déplacement &amp; Étude Gratuite à Domicile

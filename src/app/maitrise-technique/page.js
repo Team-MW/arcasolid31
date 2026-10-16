@@ -121,7 +121,7 @@ export default function MaitriseTechniquePage() {
                 </p>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "2rem" }}>
+              <div className="responsive-grid-2">
                 {technicalPoints.map((pt, i) => {
                   const Icon = pt.icon;
                   return (

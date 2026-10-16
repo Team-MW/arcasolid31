@@ -53,7 +53,7 @@ export default function EpoxyGaragePage() {
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--text-main)", margin: "2rem 0 1rem 0" }}>
                   Caractéristiques Techniques Spécial Garage
                 </h3>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                <div className="service-benefits-grid">
                   {technicalSpecs.map((spec, i) => (
                     <div key={i} style={{ background: "var(--bg-subtle)", padding: "1.1rem", borderRadius: "10px", border: "1px solid var(--border-light)" }}>
                       <div style={{ fontSize: "0.8rem", textTransform: "uppercase", color: "var(--text-muted)", fontWeight: 700 }}>

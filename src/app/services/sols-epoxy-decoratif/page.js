@@ -69,7 +69,7 @@ export default function EpoxyDecoratifPage() {
                   Nos sols en résine époxy décorative subliment les résidences privées, lofts, appartements d&apos;architecte et boutiques de prestige à Toulouse. Grâce à notre technique de coulée autolissante sans joints, vos espaces gagnent en luminosité, en volume et en distinction.
                 </p>
 
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", margin: "2rem 0" }}>
+                <div className="service-benefits-grid">
                   {benefits.map((b, i) => (
                     <div key={i} style={{ background: "var(--bg-subtle)", padding: "1.25rem", borderRadius: "12px", border: "1px solid var(--border-light)" }}>
                       <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "var(--brand-primary)", marginBottom: "0.35rem" }}>

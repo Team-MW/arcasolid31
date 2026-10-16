@@ -63,7 +63,7 @@ export default function BetonCirePage() {
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--text-main)", margin: "2rem 0 1rem 0" }}>
                   Domaines d&apos;Application
                 </h3>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                <div className="service-benefits-grid">
                   {applications.map((app, i) => (
                     <div key={i} style={{ background: "var(--bg-subtle)", padding: "1.2rem", borderRadius: "10px", border: "1px solid var(--border-light)" }}>
                       <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--brand-primary)", marginBottom: "0.3rem" }}>

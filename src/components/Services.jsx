@@ -183,20 +183,7 @@ export default function Services({ onSelectService }) {
         </div>
 
         {/* Global Banner for All Services */}
-        <div
-          style={{
-            marginTop: "3.5rem",
-            background: "linear-gradient(135deg, #F0F5F5 0%, #FFFFFF 100%)",
-            border: "1.5px solid rgba(10, 65, 64, 0.12)",
-            borderRadius: "16px",
-            padding: "2rem",
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "1.5rem"
-          }}
-        >
+        <div className="services-cta-banner">
           <div>
             <h4 style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--brand-primary)" }}>
               Vous avez un projet spécifique ou une grande surface à aménager ?
@@ -205,7 +192,7 @@ export default function Services({ onSelectService }) {
               Nous étudions tous vos plans et cahiers des charges sous 24 à 48 heures.
             </p>
           </div>
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div className="services-cta-buttons">
             <a href="tel:+33670882843" className="btn btn-secondary">
               Appeler un Expert
             </a>

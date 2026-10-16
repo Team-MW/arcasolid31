@@ -122,7 +122,7 @@ export default function AProposPage() {
                 </p>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "2rem" }}>
+              <div className="responsive-grid-2">
                 {values.map((val, i) => (
                   <div
                     key={i}

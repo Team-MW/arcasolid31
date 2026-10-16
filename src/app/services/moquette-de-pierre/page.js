@@ -60,7 +60,7 @@ export default function MoquetteDePierrePage() {
                   La moquette de pierre (ou tapis de marbre) est composée de granulats de marbre naturel soigneusement calibrés (2-4 mm ou 4-8 mm), lavés, séchés et enrobés d&apos;une résine polyuréthane haute performance. Elle habille vos terrasses, allées carrossables et contours de piscine avec une élégance naturelle incomparable.
                 </p>
 
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", margin: "2rem 0" }}>
+                <div className="service-benefits-grid">
                   {advantages.map((adv, i) => (
                     <div key={i} style={{ background: "var(--bg-subtle)", padding: "1.2rem", borderRadius: "10px", border: "1px solid var(--border-light)" }}>
                       <div style={{ fontSize: "1rem", fontWeight: 700, color: "var(--brand-primary)", marginBottom: "0.3rem" }}>
