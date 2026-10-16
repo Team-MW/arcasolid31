@@ -148,7 +148,20 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="footer-bottom">
           <div className="footer-copy">
-            &copy; {currentYear} ARCASOLID31 &bull; Tous droits réservés &bull; SAS au capital social &bull; SIREN 106 564 875 &bull; Aucamville &bull; Toulouse Métropole
+            <div>
+              &copy; {currentYear} ARCASOLID31 &bull; Tous droits réservés &bull; SAS &bull; SIREN 106 564 875 &bull; Aucamville &bull; Toulouse Métropole
+            </div>
+            <div className="footer-credits">
+              Site conçu &amp; réalisé par{" "}
+              <a
+                href="https://microdidact.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-credit-link"
+              >
+                microdidact
+              </a>
+            </div>
           </div>
           <div className="footer-bottom-nav">
             <Link href="/" className="footer-bottom-link">Accueil</Link>
